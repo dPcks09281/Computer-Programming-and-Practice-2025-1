@@ -1,9 +1,4 @@
-/* 문자를 입력받아서 문자를 출력하기 */
-/* 
- * 주어진 print_3chars, input_char 함수를 활용해서 
- * 문자 세개를 입력받고, 화면에 입력받은 문자들을 출력해보세요.
- */
-
+#include <stdio.h>
 /* 
  * print_3chars 함수
  *
@@ -17,7 +12,11 @@
  * 반환값:
  * 없음
  */
-void print_3chars(char a, char b, char c);
+void print_3chars(char a, char b, char c);/**/
+
+void print_3chars(char a, char b, char c){
+  printf("3 characters are %c, %c, %c", a, b, c);
+}
 
 /* 
  * input_char 함수
@@ -34,12 +33,18 @@ void print_3chars(char a, char b, char c);
  * 반환값:
  * char 타입의 문자
  */
-char input_char();
+char input_char();/**/
 
+char input_char() {
+  char c;
+  scanf_s("%1c", &c, 1);
+  return c;
+}
 
-int main() {
-	/* To Do: 주어진 함수들을 활용해서 문자 세개를 입력받고, 화면에 출력해보세요 */
-
-	
-	return 0;
+int main(){
+    char a=input_char();
+    char b=input_char();
+    char c=input_char();
+    print_3chars(a,b,c);
+    return 0;
 }
